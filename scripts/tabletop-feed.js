@@ -2,9 +2,7 @@ var jqueryNoConflict = jQuery;
 
 // begin main function
 jqueryNoConflict(document).ready(function(){
-
-    initializeTabletopObject('https://docs.google.com/spreadsheets/d/0An8W63YKWOsxdHlyTVAzQ1RPSGhxZDM5T3NqdU9RcHc/pubhtml');
-
+    initializeTabletopObject('https://docs.google.com/spreadsheets/d/0Ai2A6HHhmNKAdDQ4QUo4eEtXRk9ZSDhwSDZsa0FQckE/pubhtml');
 });
 
 // pull data from google spreadsheet
@@ -13,9 +11,13 @@ function initializeTabletopObject(dataSpreadsheet){
         key: dataSpreadsheet,
         callback: writeTableWith,
         simpleSheet: true,
-        debug: false
+        debug: false,
+        proxy: '//localhost:3001/visualizations/datatable/tabletop'
     });
 }
+
+
+//        proxy: 'http://apps.cloudstitch.io/visualizations/__datacache/datatable/tabletop'
 
 // create table headers
 function createTableColumns(){
