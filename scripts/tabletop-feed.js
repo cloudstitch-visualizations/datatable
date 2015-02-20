@@ -12,7 +12,7 @@ function initializeTabletopObject(dataSpreadsheet){
         callback: writeTableWith,
         simpleSheet: true,
         debug: false,
-        proxy: '//localhost:3001/visualizations/datatable/tabletop'
+        proxy: '//localhost:3001/visualizations/table/tabletop'
     });
 }
 
